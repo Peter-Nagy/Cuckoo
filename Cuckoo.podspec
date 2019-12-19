@@ -31,10 +31,6 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig         = { 'ENABLE_BITCODE' => 'NO', 'SWIFT_REFLECTION_METADATA_LEVEL' => 'none' }
   s.default_subspec             = 'Swift'
   
-  s.xcconfig = {
-    'LIBRARY_SEARCH_PATHS' => '$(TOOLCHAIN_DIR)/usr/lib/swift-$(SWIFT_VERSION)/$(PLATFORM_NAME) $(inherited)'
-  }
-
   s.subspec 'Swift' do |sub|
     sub.source_files = 'Source/**/*.swift'
   end
