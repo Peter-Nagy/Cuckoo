@@ -41,8 +41,6 @@ let generatorArguments = [
     "\(projectDir)/DifferentModule/DifferentModule.swift",
 ]
 
-print("\(projectDir)/DifferentModule/DifferentModule.swift")
-
 let useRun = Bool(ProcessInfo.processInfo.environment["USE_RUN", default: "false"]) ?? false
 
 if useRun {
