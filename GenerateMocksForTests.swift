@@ -21,7 +21,7 @@ let output = "\(projectDir)/Tests/Generated/GeneratedMocks.swift"
 let generatorArguments = [
     "generate",
     "--testable",
-    "Cuckoo",
+    "Cuckoo, DifferentModule",
     "--exclude",
     "ExcludedTestClass,ExcludedProtocol",
     "--output",
@@ -38,7 +38,10 @@ let generatorArguments = [
     "\(projectDir)/Tests/Source/GenericClass.swift",
     "\(projectDir)/Tests/Source/GenericProtocol.swift",
     "\(projectDir)/Tests/Source/GenericMethodClass.swift",
+    "\(projectDir)/DifferentModule/DifferentModule.swift",
 ]
+
+print("\(projectDir)/DifferentModule/DifferentModule.swift")
 
 let useRun = Bool(ProcessInfo.processInfo.environment["USE_RUN", default: "false"]) ?? false
 

@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import DifferentModule
 import Cuckoo
 
 extension TestedClass: Mocked {
@@ -16,6 +17,7 @@ extension TestedClass: Mocked {
 class ClassTest: XCTestCase {
 
     private var mock: MockTestedClass!
+    private var asd: MockDifferentModule!
 
     override func setUp() {
         super.setUp()
